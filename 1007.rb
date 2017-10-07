@@ -1,3 +1,4 @@
+# http://nabetani.sakura.ne.jp/hena/orde18twintri/
 require 'parallel'
 
 def calc(x, y, d, h)
@@ -25,13 +26,13 @@ def calc(x, y, d, h)
     # wing area
     n.times do |n|
       n += 1
-      case d
-        when 'R','L'
-          result.push([current_x, current_y+n])
-          result.push([current_x, current_y-n])
-        when 'T','B'
-          result.push([current_x-n, current_y])
-          result.push([current_x+n, current_y])
+      case d # TODO: out
+      when 'R','L'
+        result.push([current_x, current_y+n])
+        result.push([current_x, current_y-n])
+      when 'T','B'
+        result.push([current_x-n, current_y])
+        result.push([current_x+n, current_y])
       end
     end
 
